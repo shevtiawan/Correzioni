@@ -1,0 +1,8 @@
+tmp/logs/*.log
+tmp/cache/*
+spaguideasia-html
+.DS_Store
+*.swp
+*~
+.hgignore
+.hg

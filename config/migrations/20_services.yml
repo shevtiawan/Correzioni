@@ -1,0 +1,23 @@
+---
+DOWN:
+  drop_table:
+    - services
+
+UP:
+  create_table:
+    services:
+      title:
+        type: string
+        null: false
+        length: 255
+      description:
+        type: text
+        null: true
+      icon:
+        type: string
+        null: true
+        length: 100
+      icon_dir:
+        type: string
+        null: true
+        length: 255

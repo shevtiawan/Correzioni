@@ -1,0 +1,15 @@
+---
+DOWN:
+  alter_column:
+    product_galleries:
+      image_dir:
+        type: integer
+        null: true
+        length: 255
+UP:
+  alter_column:
+    product_galleries:
+      image_dir:
+        type: string
+        null: true
+        length: 255

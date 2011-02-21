@@ -1,0 +1,58 @@
+---
+DOWN:
+  drop_table:
+    - settings
+
+UP:
+  create_table:
+    settings:
+      image_thumbnail_size:
+        type: string
+        null: true
+        length: 255
+
+      image_medium_size:
+        type: string
+        null: true
+        length: 255
+
+      image_large_size:
+        type: string
+        null: true
+        length: 255
+
+      about_us:
+        type: text
+        null: true
+
+      terms_of_conditions:
+        type: text
+        null: true
+
+      contact_us:
+        type: text
+        null: true
+
+      company_name:
+        type: string
+        null: false
+        length: 255
+
+      smtp_username:
+        type: string
+        null: true
+        length: 255
+
+      smtp_address:
+        type: string
+        null: true
+        length: 255
+
+      smtp_password:
+        type: string
+        null: true
+        length: 255
+
+      smtp_port:
+        type: integer
+        null: true

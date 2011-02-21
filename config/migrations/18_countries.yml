@@ -1,0 +1,17 @@
+---
+DOWN: 
+  drop_table: 
+    - countries
+UP: 
+  create_table: 
+    countries: 
+      country_name: 
+        type: string
+        null: false
+        default: 
+        length: 255
+      country_slug: 
+        type: string
+        null: false
+        default: 
+        length: 255

@@ -1,0 +1,244 @@
+<?php if (count($menus) > 0 && count($products) < 1): ?>
+    <?php ?>
+    <?php foreach ($menus as $menu): ?>
+        <?php
+            $icon_path = 'no_photo.gif';
+            if (!empty($menu['Category']['thumbnail_path'])) {
+                $icon_path = $menu['Category']['thumbnail_path'];
+            }
+            $href = $this->Html->url(array(
+                'controller'=>'categories',
+                'action'=>'lists',
+                'parent_slug' => $parent['Category']['slug'],
+                'slug' => $menu['Category']['slug']
+            ));
+        ?>
+        <div class="page-sub-line" href="<?php echo $href; ?>">
+            <div class="images">
+                <img src="/img/list_img_sml.jpg" width="35" height="25" alt="Small image" />
+            </div>
+            <div class="title">Reflexology</div>
+            <div class="desc1">Content for  id "desc1" Goes Here</div>
+            <div class="arrow">
+                <img src="/img/arrow_down.png" width="24" height="23" alt="See Details" />
+            </div>
+        </div>
+
+        <div class="page-open-line">
+   	        <div class="top">
+                <div class="top-left">
+                    <img src="/img/list_img_med.jpg" width="118" height="87" alt="List Picture" />
+                    <h1>Judul</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis ...</p>
+                </div>
+                <div class="top-right-arrow">
+                    <img src="/img/arrow_up.png" width="24" height="23" alt="See Details" />
+                </div>
+            </div>
+
+            <div class="order">Order by Locality | Order by Treatment | Order by Price Range | Order by Popularity | Order by Ranking | Order by Type | Order by Year in Business</div>
+
+            <div class="search_desc">
+                Page 1 of 15 | total items matching your selection: Bali > Treatments > Relax Massage
+                <a href="#">
+                    <img src="/img/search_by_9.png" width="30" height="30" alt="Search by 9" border="0" />
+                </a>
+                <a href="#">
+                    <img src="/img/search_by_6.png" width="30" height="30" alt="Search by 6" border="0" />
+                </a>
+                <a href="#">
+                    <img src="/img/search_by_3.png" width="30" height="30" alt="Search by 3" border="0"/>
+                </a>
+            </div>
+
+            <div class="search_results_block">
+                <table align="center">
+                    <tr>
+                        <td>
+                            <a href="#">
+                                <img class="arrow-left" src="/img/arrow_left.png" width="36" height="65" alt="Previous"  border="0"/>
+                            </a>
+                            <div class="search_results_details">
+                                <h2><a href="#">The Elysian Spa</a></h2><br />
+                                <img src="/img/details_pic.png" width="187" height="123" alt="details pic" /><br /><br />
+                                Quality: <img src="/img/icon_star.png" width="73" height="13" alt="Quality" /><br />
+                                Pricing: <img src="/img/icon_$.png" width="73" height="13" alt="Pricing" /><br />
+                                Rating: <img src="/img/icon_smiley.png" width="73" height="13" alt="Rating" /><br /><br />
+                                <img src="/img/icon_ac_dark.png" alt="AC" width="20" height="20" class="icon" />
+                                <img src="/img/icon_bath_dark.png" alt="Bathtub" width="20" height="20" class="icon" />
+                                <img src="/img/icon_pan_dark.png" alt="Pan" width="20" height="20" class="icon" />
+                                <img src="/img/icon_hdry_dark.png" alt="hair dryer" width="20" height="20" class="icon" />
+                                <img src="/img/icon_jz_dark.png" alt="Jacuzzi" width="20" height="20" class="icon" /><br />
+                                <br /><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.. <a href="#">more >></a></p>
+                            </div>
+                            <a href="#">
+                                <img class="arrow-right" src="/img/arrow_right.png" width="36" height="65" alt="Next"  border="0"/>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    <?php endforeach; ?>
+
+<?php elseif (count($products) > 0): ?>
+    <div id="contentDetail" style="display:inline-table;">
+        <script type="text/javascript">
+            $.ready(function() {
+                $('.linkToProductDetail').click(function() {
+                    var linkProduct = $(this).attr('href');
+                    $.get(linkProduct,function(result) {
+                        $('#mainContent').html(result);
+                    });
+                    return false;
+                });
+            });
+        </script>
+        <div class="paging">
+            <?php
+                $this->Paginator->options(array(
+                    'url' => array(
+                        'controller' => 'categories',
+                        'action' => 'lists',
+                        'parent_slug' => $this->params['parent_slug'],
+                        'slug' => $this->params['slug'],
+                        'limit' => $this->params['named']['limit']
+                    )
+                ));
+                echo $this->Paginator->counter(array(
+                    'format' => 'Page %page% of %pages% | total %count% item(s) matching your selection: '
+                ));
+            ?>
+            <!-- breadcrumbs -->
+            <?php if ($breadCrumbs): ?>
+                <span>
+                    <?php echo implode('&nbsp;&gt;&nbsp;', Set::extract('/Category/title', $breadCrumbs)); ?>
+                </span>
+            <?php endif; ?>
+            <!-- limit selector -->
+            <?php $limiter = array(3, 6, 9); ?>
+            <ul>
+                <?php foreach ($limiter as $limit): ?>
+                <li>
+                    <?php
+                        echo $this->Html->link(
+                            "Limit {$limit}",
+                            $this->Paginator->url(array(
+                                'controller' => 'categories',
+                                'action' => 'lists',
+                                'slug' => $this->params['slug'],
+                                'parent_slug' => $this->params['parent_slug'],
+                                'limit' => $limit
+                            ), false),
+                            array('class' => "limiter-{$limit}")
+                        );
+                    ?>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+            <?php if ($this->Paginator->hasPage(2)): ?>
+                <div><?php echo $this->Paginator->prev('prev'); ?></div>
+            <?php endif; ?>
+        </div>
+        <?php foreach ($products as $prod): ?>
+             <div class="productList" style="width:190px;height:250px;">
+                <div class="left">
+                    <h4>
+                        <?php
+                          echo $this->Html->link(
+                            $prod['Product']['title'],
+                            array(
+                                'controller' => 'products',
+                                'action' => 'view',
+                                $prod['Product']['slug']
+                            ),
+                            array('class' => 'linkToProductDetail')
+                        ); ?>
+                    </h4>
+                </div>
+                <?php
+                    if (!empty($prod['ProductInfo']['thumbnail_path'])) {
+                        echo $this->Html->link(
+                            $this->Html->image($prod['ProductInfo']['medium_path'], array('width' => 175, 'height' => 100,'style'=>'display:inline;')),
+                            array('controller' => 'products', 'action' => 'view', $prod['Product']['slug']),
+                            array('escape' => false, 'class' => 'img'));
+                    }
+                ?>
+                <div class="clear">&nbsp;</div>
+                    <?php if (isset($prod['ProductRating'])): ?>
+                        <?php foreach ($prod['ProductRating'] as $pr): ?>
+                            <span class="label"><?php echo $pr['Rating']['title']; ?> : </span>
+                            <?php
+                                $disabled = false;
+                                if (!empty($votedList)) {
+                                    $disabled = in_array($pr['id'], $votedList);
+                                }
+                                echo $this->StarRating->create(
+                                    $pr['id'],
+                                    array('controller' => 'product_ratings', 'action' => 'vote'),
+                                    $pr['average'],
+                                    $disabled
+                                );
+                            ?>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                <div class="icons">
+                    <?php if (isset($prod['ProductService'])): ?>
+                        <?php foreach ($prod['ProductService'] as $ps): ?>
+                            <div class="icon">
+                                <?php
+                                    echo $this->Html->image(
+                                        "services/".$ps['Service']['icon_dir']."/".$ps['Service']['icon'],
+                                        array('title' => $ps['Service']['title'])
+                                    );
+                                ?>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </div>
+                <div class="description"><?php echo substr($prod['Product']['description'],0,200); ?></div>
+            </div>
+        <?php endforeach; ?>
+        <div class="paging">
+            <?php if ($this->Paginator->hasPage(2)): ?>
+                <div><?php echo $this->Paginator->next('next'); ?></div>
+            <?php endif; ?>
+        </div>
+        <div class="clear">&nbsp;</div>
+    </div>
+<?php endif; ?>
+
+<script type="text/javascript">
+    $(function() {
+        $('#contentDetail a.prev').click(function(e) {
+            e.preventDefault();
+            $.get($(this).attr('href'), function(result) {
+                $('#mainContent').html(result);
+            });
+        });
+        $('#contentDetail a.next').click(function(e) {
+            e.preventDefault();
+            $.get($(this).attr('href'), function(result) {
+                $('#mainContent').html(result);
+            });
+        });
+        $('a.limiter-3').click(function(e) {
+            e.preventDefault();
+            $.get($(this).attr('href'), function(result) {
+                $('#mainContent').html(result);
+            });
+        });
+        $('a.limiter-6').click(function(e) {
+            e.preventDefault();
+            $.get($(this).attr('href'), function(result) {
+                $('#mainContent').html(result);
+            });
+        });
+        $('a.limiter-9').click(function(e) {
+            e.preventDefault();
+            $.get($(this).attr('href'), function(result) {
+                $('#mainContent').html(result);
+            });
+        });
+    });
+</script>

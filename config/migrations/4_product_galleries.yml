@@ -1,0 +1,36 @@
+---
+DOWN: 
+  drop_table: 
+    - product_galleries
+UP: 
+  create_table: 
+    product_galleries: 
+      thumbnail_path: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      normal_path: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      big_path: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      caption: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      indexed_at:
+        type: integer
+        null: true
+        default: 
+        length: 11
+      is_featured:
+        type: boolean
+        null: false
+        default: false

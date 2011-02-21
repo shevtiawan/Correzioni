@@ -1,0 +1,20 @@
+---
+UP:
+  drop_column:
+    product_infos: [logo_path]
+  add_column:
+    product_infos:
+      logo:
+        type: string
+        length: 255
+      logo_dir:
+        type: string
+        length: 255
+DOWN:
+  drop_column:
+    product_infos: [logo, logo_dir]
+  add_column:
+    product_infos:
+      logo_path:
+        type: string
+        length: 255

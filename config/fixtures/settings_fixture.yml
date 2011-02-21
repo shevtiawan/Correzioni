@@ -1,0 +1,9 @@
+---
+settings:
+  -
+    id: 1
+    company_name: Correzioni
+    image_thumbnail_size: 80x80
+    image_medium_size: 600x480
+    image_large_size: 1024x768
+

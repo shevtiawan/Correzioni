@@ -1,0 +1,9 @@
+---
+users:
+  -
+    id: 1
+    email: admin@correzioni.com
+    username: admin
+    password: 5239fd42adc039316b2d6ca26d8efa76b65a82f1 #password
+    logins: 44
+    last_login: 1291544257

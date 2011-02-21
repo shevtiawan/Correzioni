@@ -1,0 +1,18 @@
+---
+UP:
+  rename_table:
+    products_services:
+      name: product_services
+  add_column:
+    product_services:
+      indexed_at:
+        type: integer
+        null: false
+        default:
+        length: 11
+DOWN:
+  drop_column:
+    product_services: [indexed_at]
+  rename_table:
+    product_services:
+      name: products_services

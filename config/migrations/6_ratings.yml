@@ -1,0 +1,45 @@
+---
+DOWN: 
+  drop_table: 
+    - ratings
+UP: 
+  create_table: 
+    ratings: 
+      parent_id: 
+        type: integer
+        null: true
+        default: 
+        length: 11
+      title: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      icon_path:
+        type: string
+        null: true
+        default: 
+        length: 255
+      description:
+        type: text
+        null: true
+        default: 
+      indexed_at: 
+        type: integer
+        null: true
+        default: 
+        length: 11
+      lft: 
+        type: integer
+        null: false
+        default: 
+        length: 11
+      rght: 
+        type: integer
+        null: false
+        default: 
+        length: 11
+      is_published:
+        type: boolean
+        null: false
+        default: true  

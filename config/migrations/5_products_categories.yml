@@ -1,0 +1,17 @@
+---
+DOWN: 
+  drop_table: 
+    - products_categories
+UP: 
+  create_table: 
+    products_categories: 
+      product_id: 
+        type: integer
+        null: false
+        default: 
+        length: 11
+      category_id: 
+        type: integer
+        null: false
+        default: 
+        length: 11

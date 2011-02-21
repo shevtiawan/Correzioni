@@ -1,0 +1,17 @@
+---
+DOWN:
+  drop_table:
+    - products_services
+UP:
+  create_table:
+    products_services:
+      product_id:
+        type: integer
+        null: false
+        default:
+        length: 11
+      service_id:
+        type: integer
+        null: false
+        default:
+        length: 11

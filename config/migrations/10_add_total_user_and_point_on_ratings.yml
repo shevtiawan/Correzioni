@@ -1,0 +1,18 @@
+---
+DOWN: 
+  remove_column: 
+    ratings:
+      total_user:
+UP: 
+  add_column: 
+    ratings: 
+      total_user: 
+        type: integer
+        null: true
+        default: 
+        length: 11
+      point: 
+        type: integer
+        null: false
+        default: 0
+        length: 11

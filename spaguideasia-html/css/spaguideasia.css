@@ -1,0 +1,627 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #2f373a url(../images/spaguideasia_bg.png) top left repeat-x;
+	margin:auto;
+	padding:0;
+	color: #ffffff;
+	text-align: justify;
+	font-family: Tahoma;
+}
+#wrapper {
+	width: 1018px;
+	background: none;
+	margin: auto;
+	padding:0;
+}
+/************************HEADER***************************/
+#header {
+position: relative;
+	width: 1018px;
+	height: 120px;
+	background: url(../images/spaguideasia_header.png) top left no-repeat;
+	margin: auto;
+	padding: 0;
+}
+#header_block {
+float: right;
+width: 200px;
+height: 70px;
+margin-top: 35px;
+margin-right: 10px;
+padding: 0;
+
+}
+#search_box {
+		float: right;
+    		width: 180px;
+    		height: 24px;
+			margin:0;
+    		background: url(../images/search_button.png) top left no-repeat;
+		}
+		#search_box #s {
+    		float: left;
+    		padding: 0;
+    		margin: 4px 0 0 8px;
+    		border: 0;
+    		width: 140px;
+    		background: none;
+			}
+		#search_box #go {
+    		float: right;
+    		margin: 0px 4px 0 0;
+		}
+/********************SOCIAL BOOKMARK*********************/
+#social {
+float: right;
+width: 180px;
+height: 27px;
+padding: 0;
+margin-top: 5px;
+}
+
+	#social_fb, #social_fb a {
+	float:left;
+	width: 27px;
+	height: 27px;
+	background-image:url(../images/social_fb.png);
+	padding: 0;
+	margin-right:3px;
+}
+	#social_fb a:hover{
+	float:left;
+	background-image:url(../images/social_fb.png);
+	background-position: 0 -28px;
+	padding: 0;
+	margin: 0;}
+	
+	#social_bing, #social_bing a {
+	float:left;
+	width: 27px;
+	height: 27px;
+	background-image:url(../images/social_bing.png);
+	padding: 0
+	;margin-right:3px;
+}
+	#social_bing a:hover{
+	float:left;
+	background-image:url(../images/social_bing.png);
+	background-position: 0 -28px;
+	padding: 0;
+	margin: 0;}
+	
+	#social_x, #social_x a {
+	float:left;
+	width: 27px;
+	height: 27px;
+	background-image:url(../images/social_x.png);
+	padding: 0;
+	margin-right:3px;
+}
+	#social_x a:hover{
+	float:left;
+	background-image:url(../images/social_x.png);
+	background-position: 0 -28px;
+	padding: 0;
+	margin: 0;}
+	
+	#social_fr, #social_fr a {
+	float:left;
+	width: 27px;
+	height: 27px;
+	background-image:url(../images/social_fr.png);
+	padding: 0;
+	margin-right:3px;
+}
+	#social_fr a:hover{
+	float:left;
+	background-image:url(../images/social_fr.png);
+	background-position: 0 -28px;
+	padding: 0;
+	margin: 0;}
+	
+	#social_del, #social_del a {
+	float:left;
+	width: 27px;
+	height: 27px;
+	background-image:url(../images/social_del.png);
+	padding: 0;
+	margin-right:3px;
+}
+	#social_del a:hover{
+	float:left;
+	background-image:url(../images/social_del.png);
+	background-position: 0 -28px;
+	padding: 0;
+	margin: 0;}
+	
+	#social_rss, #social_rss a {
+	float:left;
+	width: 27px;
+	height: 27px;
+	background-image:url(../images/social_rss.png);
+	padding: 0;
+	margin-right:3px;
+}
+	#social_rss a:hover{
+	float:left;
+	background-image:url(../images/social_rss.png);
+	background-position: 0 -28px;
+	padding: 0;
+	margin: 0;}
+/********************CONTENT*************************/
+#body_content {
+	width: 1018px;
+	margin: auto;
+	padding: 0;
+}
+#shadow_left {
+	float: left;
+	width: 10px;
+	height: 842px;
+	background:url(../images/spaguideasia_shadow_l.png) top left repeat-y;
+	margin: auto;
+	padding: 0;
+}
+#content {
+	float: left;
+	width: 998px;
+	margin: 0;
+	padding: 0;
+}
+/************************************MENU***************************************/
+#menu {
+position:relative;
+	width: 998px;
+	height: 33px;
+	background:url(../images/spaguideasia_menu.png) top left no-repeat;
+	padding: 0;
+	margin: 0;}
+/******************************************************************************/	
+#main-pic {
+	position:relative;
+	width: 998px;
+	height: 498px;
+	background:url(../images/spaguideasia_mainpic.jpg) top left no-repeat;
+	border-bottom: 1px solid #666;
+	margin: 0;
+	padding: 0;
+}
+#main-pic-text {
+	position:absolute;
+	height: 110px;
+	width: 450px;
+	font-size: 14px;
+	text-align: right;
+	padding: 10px;
+	margin: 375px 0 0 520px ;
+	}
+/***********************************PAGE DETAILS*********************************/
+#page-content_block {
+	position:relative;
+	width: 996px;
+	height: 666px;
+	background:#fff;
+	border-bottom: 1px solid #666;
+	border-left: 1px solid #666;
+	border-right: 1px solid #666;
+	margin: 0;
+	padding: 0;
+}
+#page_title {
+width: 988px;
+height: 16px;
+background: url(../images/bg_title.png) top left repeat-x;
+color: #9ba0c9;
+font-size:12px;
+margin: auto;
+padding: 4px 4px 16px 4px;
+}
+#page_title a {
+text-decoration: none;
+color:#9ba0c9;}
+#page_title a.active {
+color:#FFFFFF;}
+#page_title a:hover {color:#FFFFFF; }
+
+#page_details {
+width: 968px;
+height: 622px;
+color: #9ba0c9;
+font-size:12px;
+margin: auto;
+padding: 4px 10px;
+}
+/****************************LEFT SIDE***************************/
+#page_details_left {
+position: relative;
+float:left;
+width: 215px;
+height: 622px;
+color: #9ba0c9;
+font-size:12px;
+margin: auto;
+padding: 0px;
+}
+/*************************SPA LOGO******************************/
+	#page_details_left_logo_wrapper {
+	position: absolute;
+	width: 205px;
+	height: 70px;
+	background:url(../images/page_logo_wrapper.png) top left no-repeat;
+	margin: 0 5px;
+	padding: 0;
+	top:0;
+	}
+	#page_details_left_logo {
+	width: 205px;
+	height: 70px;
+	margin: 0 5px;
+	padding: 0;
+	}
+/*******************************LEFT ADDRESS**************************************/
+#page_details_left_address {
+	width: 196px;
+	height: 91px;
+	margin: 10px 9px 0 9px;
+	padding: 0;
+	}
+	
+	#page_details_left_address #top {
+	background: url(../images/box_top.png) top left no-repeat;
+	width: 181px;
+	height: 17px;
+	color:#39687d;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px 0 0 15px;
+	}
+	#page_details_left_address #mid {
+	background: url(../images/box_mid.png) top left repeat-y;
+	width: 166px;
+	height: 55px;
+	color:#39687d;
+	font-weight: normal;
+	margin: 0;
+	padding: 5px 15px ;
+	}
+	#page_details_left_address #bottom {
+	background: url(../images/box_bottom.png) top left no-repeat;
+	width: 196px;
+	height: 4px;
+	color:#39687d;
+	font-weight: bold;
+	margin: 0;
+	padding:0;
+	}
+/*******************************LEFT RATING REASON**************************************/
+	#page_details_left_rating {
+	width: 196px;
+	height: 91px;
+	margin: 5px 9px;
+	padding: 0;
+	}
+	
+	#page_details_left_rating #top {
+	background: url(../images/box_top.png) top left no-repeat;
+	width: 181px;
+	height: 17px;
+	color:#2f373a;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px 0 0 15px;
+	}
+	#page_details_left_rating #mid {
+	background: url(../images/box_mid.png) top left repeat-y;
+	width: 166px;
+	height: 55px;
+	color:#2f373a;
+	font-weight: normal;
+	line-height:18px;
+	margin: 0;
+	padding: 5px 15px ;
+	}
+	#page_details_left_rating #bottom {
+	background: url(../images/box_bottom.png) top left no-repeat;
+	width: 196px;
+	height: 4px;
+	color:#2f373a;
+	font-weight: bold;
+	margin: 0;
+	padding:0;
+	}
+/*******************************LEFT OFFERED SERVICE**************************************/
+	#page_details_left_service {
+	width: 196px;
+	height: 148px;
+	margin: 5px 9px;
+	padding: 0;
+	}
+	
+	#page_details_left_service #top {
+	background: url(../images/box_top.png) top left no-repeat;
+	width: 181px;
+	height: 17px;
+	color:#2f373a;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px 0 0 15px;
+	}
+	#page_details_left_service #mid {
+	background: url(../images/box_mid.png) top left repeat-y;
+	width: 166px;
+	height: 108px;
+	color:#2f373a;
+	font-weight: normal;
+	margin: 0;
+	padding: 7px 15px ;
+	}
+	#page_details_left_service #mid img { float:left;
+	margin: 0;
+	padding: 2px 0;
+	}
+	
+	#page_details_left_service #bottom {
+	background: url(../images/box_bottom.png) top left no-repeat;
+	width: 196px;
+	height: 4px;
+	font-weight: bold;
+	margin: 0;
+	padding:0;
+	}
+/*******************************LEFT OFFERED LOCATION**************************************/
+	#page_details_left_service {
+	width: 196px;
+	height: 148px;
+	margin: 5px 9px;
+	padding: 0;
+	}
+	
+	#page_details_left_service #top {
+	background: url(../images/box_top.png) top left no-repeat;
+	width: 181px;
+	height: 17px;
+	color:#2f373a;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px 0 0 15px;
+	}
+	#page_details_left_service #mid {
+	background: url(../images/box_mid.png) top left repeat-y;
+	width: 166px;
+	height: 108px;
+	color:#2f373a;
+	font-weight: normal;
+	margin: 0;
+	padding: 7px 15px ;
+	}
+	#page_details_left_service #mid img { float:left;
+	margin: 0;
+	padding: 2px 0;
+	}
+	
+	#page_details_left_service #bottom {
+	background: url(../images/box_bottom.png) top left no-repeat;
+	width: 196px;
+	height: 4px;
+	font-weight: bold;
+	margin: 0;
+	padding:0;
+	}
+	/*******************************LEFT OFFERED LOCATION**************************************/
+	#page_details_left_location {
+	width: 196px;
+	height: 148px;
+	margin: 5px 9px;
+	padding: 0;
+	}
+	
+	#page_details_left_location #top {
+	background: url(../images/box_top.png) top left no-repeat;
+	width: 171px;
+	height: 17px;
+	color:#2f373a;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px 10px 0 15px;
+	}
+	
+	#page_details_left_location #top .right{
+	float: right;
+	text-align: right;
+	}
+	
+	#page_details_left_location #mid {
+	background: url(../images/box_mid.png) top left repeat-y;
+	width: 193px;
+	height: 155px;
+	color:#2f373a;
+	font-weight: normal;
+	margin: 0;
+	padding:0 1px;
+	}
+	
+	
+	#page_details_left_location #bottom {
+	background: url(../images/box_bottom.png) top left no-repeat;
+	width: 196px;
+	height: 4px;
+	font-weight: bold;
+	margin: 0;
+	padding:0;
+	}
+	
+/*****************************************************************************/	
+/**********************************PAGE RIGHT SIDE*********************************/	
+#page_details_right{
+float:left;
+width: 743px;
+height: 622px;
+color: #9ba0c9;
+font-size:12px;
+margin: auto;
+padding: 0 5px;
+}
+	#page_details_right_text{
+	overflow: auto;
+	float:left;
+	width: 743px;
+	height: 300px;
+	color: #2f373a;
+	font-size:12px;
+	margin: auto;
+	padding: 0;
+	}
+	#page_details_right_text h1 {
+	float:left;
+	width: 356px;
+	height: 30px;
+	color: #39687d;
+	font-size:24px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-top: 40px;}
+#page_details_right_text img {
+float: right;
+margin-left: 20px;
+padding: 0;}
+	
+	
+	/************************PHOTO SLIDESHOW****************************/
+	#page_details_right_slide{
+	float:left;
+	width: 743px;
+	height: 101px;
+	color: #2f373a;
+	margin: auto;
+	margin-bottom: 2px;
+	margin-top: 7px;
+	padding: 0;
+	}
+	#page_details_right_slide img {
+	padding: 0 4px;
+	vertical-align:middle;
+	}
+	/*************************TABS*******************************/
+	#page_details_right_tab_block {
+	float: left;
+	position: relative;
+	width: 743px;
+	height: 193px;
+	padding: 0;
+	margin-top:10px;
+	}
+	#page_details_right_tab_wrapper {
+	position: absolute;
+	width: 743px;
+	height: 193px;
+	background: url(../images/tabs_box.png) top left no-repeat;
+	margin: 0;
+	padding: 0;
+	top:0;
+	}
+	#page_details_right_tab {
+	width: 713px;
+	height: 163px;
+	margin: 0;
+	color: #2f373a;
+	padding: 15px;
+	}
+	
+/******************************INDEX SPA FEATURE*********************************/
+#banner_feature {
+	width: 982px;
+	height: 163px;
+	background: #3a4347;
+	padding: 4px 0 0 14px;
+	margin: 0;
+	border-left: 1px #666 solid;
+	border-right: 1px #666 solid;
+}
+ #banner_feature_title {
+	width: 982px;
+	height: 22px;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+#banner_feature_block {
+	width: 982px;
+	height: 151px;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 0;
+	margin: 0;
+}
+#banner_feature_block .img {
+	float: right;
+	width: 87px;
+	height: 87px;
+	padding: 5px;
+	margin: 0;}
+	#banner_feature_block .img a {
+	float: right;
+	border: none;
+	padding: 0;
+	margin: 0;
+	}
+	#banner_feature_block .icon {
+	float: none;
+	padding: 0;
+	margin-right: 3px;}
+	
+#banner_feature_show {
+	float: left;
+	margin-right: 15px;
+	width: 297px;
+	height: 130px;
+	padding: 5px 5px 5px 10px; 
+	background:url(../images/spaguideasia_feature_bg.png) top left no-repeat;
+}
+#banner_feature_show a {
+color: #fff;
+text-decoration: none;
+}
+#banner_feature_show a:hover {
+color: #aaa;
+text-decoration: none;
+}
+
+
+/********************************************************************************/
+#banner_ads {
+	width: 998px;
+	height: 108px;
+	background:url(../images/spaguideasia_ads.png) top left no-repeat;
+	padding-top: 25px;
+	margin: 0;
+	text-align: center;
+}
+#shadow_bottom {
+	width: 998px;
+	height: 10px;
+	background: url(../images/spaguideasia_shadow_b.png) top left no-repeat;
+	padding: 0;
+	margin: 0;
+}
+#shadow_right {
+	float: left;
+	width: 10px;
+	height: 842px;
+	background:url(../images/spaguideasia_shadow_r.png) top left repeat-y;
+	margin: auto;
+	padding: 0;
+}
+#footer {
+	float: left;
+	background: #2f373a;
+	width:1018px;
+	height: 15px;
+	margin: 0;
+	padding-top:3px;
+	padding-bottom: 10px;
+	color: #FFF;
+	font-size:10px;
+	text-align: center;}

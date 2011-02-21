@@ -1,0 +1,13 @@
+---
+DOWN: 
+  remove_column: 
+    product_galleries:
+      product_id:
+UP: 
+  add_column: 
+    product_galleries: 
+      product_id: 
+        type: integer
+        null: true
+        default: 
+        length: 11 

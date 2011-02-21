@@ -1,0 +1,10 @@
+---
+UP:
+  add_column:
+    users:
+      confirmation_key:
+        type: string
+        length: 12
+DOWN:
+  drop_column:
+    users: [confirmation_key]

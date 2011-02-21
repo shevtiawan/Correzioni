@@ -1,0 +1,440 @@
+body {
+    background: url("../img/spaguideasia_bg.png") repeat-x scroll left top #2F373A;
+    color: #FFFFFF;
+    font-family: Tahoma;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
+
+#wrapper {
+    width: 1018px;
+    margin: 0 auto;
+}
+
+#header {
+    background: url("../img/spaguideasia_header.png") no-repeat scroll left top transparent;
+    height: 120px;
+    overflow: hidden;
+}
+#header_block {
+    float: right;
+    height: 70px;
+    margin-top: 35px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+#search_box {
+    background: url("../img/search_button.png") no-repeat scroll left top transparent;
+    float: right;
+    height: 24px;
+    width: 180px;
+}
+#search_box #s {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    float: left;
+    margin: 4px 0 0 8px;
+    width: 140px;
+}
+
+/********************SOCIAL BOOKMARK*********************/
+#social {
+    float: right;
+    width: 180px;
+    height: 27px;
+    margin-top: 5px;
+}
+#social_fb, #social_fb a {
+    float:left;
+    width: 27px;
+    height: 27px;
+    background-image:url(../img/social_fb.png);
+    margin-right:3px;
+}
+#social_fb a:hover {
+    float:left;
+    background-image:url(../img/social_fb.png);
+    background-position: 0 -28px;
+}
+#social_bing, #social_bing a {
+    float:left;
+    width: 27px;
+    height: 27px;
+    background-image:url(../img/social_bing.png);
+    margin-right:3px;
+}
+#social_bing a:hover {
+    float:left;
+    background-image:url(../img/social_bing.png);
+    background-position: 0 -28px;
+}
+#social_x, #social_x a {
+    float:left;
+    width: 27px;
+    height: 27px;
+    background-image:url(../img/social_x.png);
+    margin-right:3px;
+}
+#social_x a:hover {
+    float:left;
+    background-image:url(../img/social_x.png);
+    background-position: 0 -28px;
+}
+
+#social_fr, #social_fr a {
+    float:left;
+    width: 27px;
+    height: 27px;
+    background-image:url(../img/social_fr.png);
+    margin-right:3px;
+}
+#social_fr a:hover {
+    float:left;
+    background-image:url(../img/social_fr.png);
+    background-position: 0 -28px;
+}
+#social_del, #social_del a {
+    float:left;
+    width: 27px;
+    height: 27px;
+    background-image:url(../img/social_del.png);
+    margin-right:3px;
+}
+#social_del a:hover {
+    float:left;
+    background-image:url(../img/social_del.png);
+    background-position: 0 -28px;
+}
+#social_rss, #social_rss a {
+    float:left;
+    width: 27px;
+    height: 27px;
+    background-image:url(../img/social_rss.png);
+    margin-right:3px;
+}
+#social_rss a:hover {
+    float:left;
+    background-image:url(../img/social_rss.png);
+    background-position: 0 -28px;
+}
+/*** CONTENT ***/
+#body_content {
+    overflow:hidden;
+}
+#menu {
+    height: auto;
+    overflow:hidden;
+}
+#menu ul {
+    overflow:hidden;
+    margin:0;
+    padding:0;
+}
+#menu li {
+    position: relative;
+    float: left;
+    margin-right: -10px;
+    list-style: none;
+}
+
+#menu li a {
+    display: block;
+    background-image: url(../img/menu-overlay.png);
+    background-repeat: repeat-x;
+    padding: 10px 0;
+    border-left: 1px solid #676866;
+    border-top: 1px solid #676866;
+    border-right: 1px solid #676866;
+    -moz-border-radius: 7px 7px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    width: 118px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font: normal bold 12px arial;
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+#shadow_left {
+    background: url("../img/spaguideasia_shadow_l.png") repeat-y scroll left top transparent;
+    float: left;
+/*    height: 842px;*/
+    width: 10px;
+}
+#shadow_right {
+    background: url("../img/spaguideasia_shadow_r.png") repeat-y scroll left top transparent;
+    float: left;
+/*    height: 842px;*/
+    width: 10px;
+}
+#shadow_bottom {
+    background: url("../img/spaguideasia_shadow_b.png") no-repeat scroll left top transparent;
+    height: 10px;
+    width:998px;
+}
+#content {
+    float: left;
+    width:998px;
+}
+
+/*** MAIN CONTENT ***/
+#main-pic {
+    border-bottom: 1px solid #666666;
+    height: auto;
+    overflow: hidden;
+}
+#main-pic-text {
+    float: right;
+    font-size: 14px;
+    margin-right: 15px;
+    margin-top: -110px;
+    position: relative;
+    text-align: right;
+    width: 450px;
+}
+#list-line-block {
+    border-bottom: 1px solid #666666;
+    width: 998px;
+    z-index: 200;
+}
+#page-line {
+    background-color: #344282;
+    border-bottom: 1px solid #333333;
+    color: #FFFFFF;
+    font-size: 12px;
+    height: 15px;
+    padding: 4px;
+/*    width: 988px;*/
+    z-index: 200;
+}
+#page-line ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+#page-line ul li {
+    float:left;
+    margin: 0 5px;
+}
+#page-line a {
+    color:#FFF;
+    text-decoration:none;
+}
+.page-sub-line {
+    background-color: #7FAAC8;
+    border-bottom: 1px solid #333333;
+    color: #FFFFFF;
+    font-size: 12px;
+    height: 25px;
+    padding: 4px;
+    vertical-align: middle;
+    width: 988px;
+}
+.page-sub-line .images {
+    border-right: 1px solid #333333;
+    float: left;
+    height: 25px;
+    padding-right: 4px;
+    width: 35px;
+}
+.page-sub-line .title {
+    border-right: 1px solid #333333;
+    color: #333333;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 25px;
+    padding: 0 4px;
+    width: 660px;
+}
+.page-sub-line .desc {
+    border-right: 1px solid #333333;
+    color: #333333;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 25px;
+    padding: 0 4px;
+    text-align: center;
+    width: 200px;
+}
+.page-sub-line .arrow {
+    float: left;
+    padding-left: 8px;
+    width: 50px;
+}
+.page-open-line {
+    border-bottom: 1px solid #333333;
+    font-size: 12px;
+    width: 996px;
+}
+.page-open-line .top {
+    background-color: #99BBD3;
+    border-bottom: 1px solid #333333;
+    color: #333333;
+    float: left;
+    font-size: 12px;
+    height: 86px;
+    padding: 4px;
+    width: 988px;
+}
+.page-open-line .top-left {
+    background-color: #99BBD3;
+    border-right: 1px solid #333333;
+    color: #333333;
+    float: left;
+    font-size: 12px;
+    height: 86px;
+    padding-right: 10px;
+    width: 908px;
+}
+.page-open-line .top-left img {
+    border: medium none;
+    float: left;
+    margin-right: 8px;
+}
+.page-open-line .top-left h1 {
+    border: medium none;
+    color: #344282;
+    font-size: 13px;
+    font-weight: bold;
+}
+.page-open-line .top-right-arrow {
+    float: left;
+    height: 86px;
+    padding-left: 8px;
+}
+.page-open-line .order {
+    background-color: #CCDDE9;
+    border-bottom: 1px solid #333333;
+    color: #333333;
+    float: left;
+    font-size: 12px;
+    height: 20px;
+    padding: 4px;
+    width: 988px;
+}
+.search_desc {
+    -moz-box-shadow: 0 2px 8px -2px #444444 inset;
+    background-color: #979B9C;
+    color: #30383B;
+    float: left;
+    font-size: 12px;
+    height: 30px;
+    padding: 4px;
+    width: 988px;
+}
+.search_desc img {
+    border: medium none;
+    float: right;
+    height: 30px;
+    width: 30px;
+}
+.search_results_block {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #333333;
+    clear: both;
+    color: #30383B;
+    font-size: 12px;
+    overflow: hidden;
+    padding: 10px 0;
+    text-align: center;
+    width: 996px;
+}
+.search_results_block .arrow-left {
+    float: left;
+    margin-top: 160px;
+    vertical-align: middle;
+}
+.search_results_block .arrow-right {
+    float: right;
+    margin-top: 160px;
+    vertical-align: middle;
+}
+.search_results_details {
+    -moz-border-radius: 10px 10px 10px 10px;
+    -moz-box-shadow: 2px 2px 7px #DDDDDD;
+    background-color: #F1F1F1;
+    border: 1px solid #DDDDDD;
+    color: #416A7D;
+    float: left;
+    margin: 10px 15px;
+    padding: 10px 0 0 10px;
+    text-align: left;
+    vertical-align: middle;
+    width: 200px;
+}
+.search_results_details h2, .search_results_details h2 a {
+    color: #416A7D;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.search_results_details a {
+    color: #416A7D;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*** BANNER ***/
+#banner_feature {
+    background: none repeat scroll 0 0 #3A4347;
+    border-left: 1px solid #666666;
+    border-right: 1px solid #666666;
+}
+#banner_feature_block {
+    font-size: 12px;
+    line-height: 15px;
+    overflow: hidden;
+    padding: 5px 15px;
+}
+#banner_feature_block .img {
+    float: right;
+    height: 87px;
+    padding: 5px;
+    width: 87px;
+}
+#banner_feature_title {
+    font-size: 12px;
+    font-weight: bold;
+}
+.banner_feature_show {
+    background: url("../img/spaguideasia_feature_bg.png") no-repeat scroll left top transparent;
+    float: left;
+    margin-right: 10px;
+    padding: 5px;
+    width: 302px;
+}
+.banner_feature_show a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.banner_feature_show a:hover {
+    color: #AAA;
+    text-decoration: none;
+}
+#banner_ads {
+    background: url("../img/spaguideasia_ads.png") no-repeat scroll left top transparent;
+    height: 108px;
+    padding-top: 25px;
+    text-align: center;
+}
+
+/*** FOOTER ***/
+#footer {
+    background: none repeat scroll 0 0 #2F373A;
+    color: #FFFFFF;
+    float: left;
+    font-size: 10px;
+    height: 15px;
+    padding-bottom: 10px;
+    padding-top: 3px;
+    text-align: center;
+    width: 1018px;
+}
+

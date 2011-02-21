@@ -1,0 +1,15 @@
+<ul id="user_details_menu">
+    <li>Welcome <strong><?php echo $user['User']['username']; ?></strong></li>
+    <li>
+        <ul id="user_access">
+            <li class="first"><a href="#">My account</a></li>
+            <li class="last">
+                <?php echo $this->Html->link('Log out', array(
+                    'controller' => 'users',
+                    'action' => 'logout',
+                    'admin' => false
+                )); ?>
+            </li>
+        </ul>
+    </li>
+</ul>

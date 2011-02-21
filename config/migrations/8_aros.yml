@@ -1,0 +1,33 @@
+---
+DOWN: 
+  drop_table: 
+    - aros
+UP: 
+  create_table: 
+    aros: 
+      parent_id: 
+        type: integer
+        null: true
+        default: 
+        length: 11
+      model:
+        type: string
+        null: true
+        default: ""
+        length: 255
+      foreign_key:
+        type: integer
+        null: true
+        length: 11
+      alias:
+        type: string
+        null: true
+        length: 255
+      lft:
+        type: integer
+        null: true
+        length: 11
+      rght:
+        type: integer
+        null: true
+        length: 11

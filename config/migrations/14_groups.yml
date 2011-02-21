@@ -1,0 +1,17 @@
+---
+DOWN: 
+  drop_table: 
+    - groups
+UP: 
+  create_table: 
+    groups: 
+      name: 
+        type: string
+        null: false
+        default: 
+        length: 255
+      alias: 
+        type: string
+        null: false
+        default: 0
+        length: 255

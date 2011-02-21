@@ -1,0 +1,10 @@
+---
+UP:
+  add_column:
+    ratings:
+      icon_dir:
+        type: string
+        length: 100
+DOWN:
+  drop_column:
+    ratings: [icon_dir]

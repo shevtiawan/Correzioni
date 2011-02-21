@@ -1,0 +1,36 @@
+<div class="forms">
+  <?php
+	echo $this->Form->input('username');
+	if (!empty($this->data['User']['id']) && $this->params['prefix'] == 'admin') {
+        echo $this->Form->input('new_password', array('type' => 'password'));
+    } else {
+        echo $this->Form->input('password');
+    }
+    echo $this->Form->input('confirm_password',array('type'=>"password"));
+	echo $this->Form->input('full_name');
+	echo $this->Form->input('email');
+	echo $this->Form->input('group_id');
+	echo $this->Form->input('active');
+  ?>
+
+ <div class="input">
+    <label>&nbsp;</label>
+    <div class="buttons" style="padding:0;">
+      <span class="button send_form_btn"><span><span>SAVE</span></span><input name="" type="submit" /></span>
+      <?php if($this->Form->value('User.id') > 0){ ?>
+      <span class="button" style="padding-left:10px">&nbsp;</span>
+      <span class="button red_btn"><span><span>DELETE</span></span><input name="" type="delete" onclick="javascript:confirmDelete()" /></span>
+    <?php } ?>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+  function confirmDelete(){
+    if(confirm('Are you sure you want to delete # <?php echo $this->Form->value('User.full_name') ?>?')){
+      window.location = "<?php echo $this->Html->url(array('action' => 'delete', $this->Form->value('User.id'))) ?>";
+    }
+  }
+
+</script>

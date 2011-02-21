@@ -1,0 +1,10 @@
+---
+UP:
+  add_column:
+    categories:
+      icon_dir:
+        type: string
+        length: 255
+DOWN:
+  drop_column:
+    categories: [icon_dir]

@@ -1,0 +1,35 @@
+---
+DOWN:
+  add_column:
+    product_galleries:
+      thumbnail_path:
+        type: string
+        null: true
+        default:
+        length: 255
+      normal_path:
+        type: string
+        null: true
+        default:
+        length: 255
+      big_path:
+        type: string
+        null: true
+        default:
+        length: 255
+  drop_column:
+    product_galleries: [image, image_dir]
+UP:
+  drop_column:
+    product_galleries: [thumbnail_path, normal_path, big_path]
+  add_column:
+    product_galleries:
+      image:
+        type: string
+        null: true
+        default:
+        length: 100
+      image_dir:
+        type: integer
+        null: true
+        length: 255

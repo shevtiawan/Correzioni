@@ -1,0 +1,39 @@
+---
+DOWN: 
+  drop_table: 
+    - products
+UP: 
+  create_table: 
+    products: 
+      title: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      description:
+        type: text
+        null: true
+        default: 
+      slug: 
+        type: string
+        null: true
+        default: 
+      indexed_at: 
+        type: integer
+        null: true
+        default: 
+        length: 11
+      lft: 
+        type: integer
+        null: false
+        default: 
+        length: 11
+      rght: 
+        type: integer
+        null: false
+        default: 
+        length: 11
+      is_published:
+        type: boolean
+        null: false
+        default: true  

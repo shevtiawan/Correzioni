@@ -1,0 +1,62 @@
+---
+DOWN: 
+  drop_table: 
+    - product_infos
+UP: 
+  create_table: 
+    product_infos: 
+      logo_path: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      address: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      state: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      city: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      postcode: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      country: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      email: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      phone: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      fax: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      google_lat:
+        type: string
+        null: true
+        default: 
+        length: 255
+      google_lang:
+        type: string
+        null: true
+        default: 
+        length: 255

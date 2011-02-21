@@ -1,0 +1,19 @@
+---
+DOWN: 
+  remove_column: 
+    categories:
+      width:
+      height:
+UP: 
+  add_column: 
+    categories: 
+      width: 
+        type: integer
+        null: false
+        default: 0
+        length: 11
+      height: 
+        type: integer
+        null: false
+        default: 0
+        length: 11

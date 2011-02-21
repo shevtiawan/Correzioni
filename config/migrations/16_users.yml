@@ -1,0 +1,37 @@
+---
+DOWN: 
+  drop_table: 
+    - users
+UP: 
+  create_table: 
+    users: 
+      username: 
+        type: string
+        null: false
+        default: 
+        length: 255
+      password: 
+        type: string
+        null: false
+        default: 
+        length: 255
+      full_name: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      email: 
+        type: string
+        null: true
+        default: 
+        length: 255
+      group_id: 
+        type: integer
+        null: true
+        default: 
+        length: 11
+      active: 
+        type: boolean
+        null: true
+        default: false
+        length: 1

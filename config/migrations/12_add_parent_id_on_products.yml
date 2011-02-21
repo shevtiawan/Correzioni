@@ -1,0 +1,13 @@
+---
+DOWN: 
+  remove_column: 
+    products:
+      parent_id:
+UP: 
+  add_column: 
+    products: 
+      parent_id: 
+        type: integer
+        null: true
+        default: 
+        length: 11 

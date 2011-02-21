@@ -1,0 +1,13 @@
+syntax:glob
+webroot/local_index.php
+webroot/index.php
+config/database.php
+config/local_bootstrap.php
+tmp/*
+*.git*
+*.orig
+!empty
+application/logs/
+fabfile.py
+fabfile.pyc
+glob:spaguideasia-html/

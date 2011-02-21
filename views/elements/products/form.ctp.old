@@ -1,0 +1,42 @@
+<div class="forms">
+    <?php
+    echo $this->Form->input('parent_id', array(
+        'options' => $parents,
+        'empty' => 'None',
+        'selected' => (isset($parent_id) ? $parent_id : null)
+    ));
+    echo $this->Form->input('title');
+    echo $this->Form->input('description', array('label' => "Body"));
+    echo $this->Form->hidden('lft');
+    echo $this->Form->hidden('rght');
+    echo $this->Form->input('is_published');
+
+    if ($this->params['prefix'] == "admin") {
+        echo $this->Form->input('Category', array(
+            'style' => "width:200px",
+            'options' => $categories,
+            'empty' => 'None'
+        ));
+    }
+    ?>
+
+    <div class="input">
+        <label>&nbsp;</label>
+        <div class="buttons" style="padding:0;">
+            <span class="button send_form_btn"><span><span>SAVE</span></span><input name="" type="submit" /></span>
+            <?php if ($this->Form->value('Category.id') > 0): ?>
+                <span class="button" style="padding-left:10px">&nbsp;</span>
+                <span class="button red_btn"><span><span>DELETE</span></span><input name="" type="delete" onclick="javascript:confirmDelete()" /></span>
+            <?php endif; ?>
+    </div>
+</div>
+
+<script type="text/javascript">
+    /*
+    $(document).ready(function() {
+        $('input[name*="data[Product][title]"]').change(function(){
+            var slug = $(this).val().replace(/\W/gi,"-");
+            $('input[name*="data[Product][slug]"]').val(slug);
+        });
+    });*/
+</script>

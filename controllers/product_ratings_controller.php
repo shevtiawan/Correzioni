@@ -1,0 +1,190 @@
+<?php
+class ProductRatingsController extends AppController {
+
+	var $name = 'ProductRatings';
+
+	var $layout = 'admin';
+
+	function beforeRender() {
+	    parent::beforeRender();
+	    $isDetail = $isOffice = $isGallery = $isTabs = $isServices = "";
+        $isRatings = "active";
+        $this->set(compact(
+            'isDetail', 'isOffice', 'isGallery', 'isTabs',
+            'isRatings', 'isServices'
+        ));
+	}
+
+	function admin_index($product_id = null) {
+	    $product = $this->ProductRating->Product->find('first', array(
+	        'conditions' => array('Product.id' => $product_id)
+	    ));
+	    if (!$product) {
+	        $this->Session->setFlash(sprintf(__('Invalid product', true)));
+            $this->redirect(array(
+                'controller' => 'products', 'action' => 'index', 'admin' => true
+            ));
+        }
+        $this->paginate = array(
+            'conditions' => compact('product_id'),
+            'contain' => array('Rating' => array('fields' => array('title', 'icon_path', 'image_path'))),
+            'order' => 'ProductRating.indexed_at DESC'
+        );
+        $paths = $this->ProductRating->Product->getPath($product_id, array('id', 'parent_id', 'title'), -1);
+		$this->set('productRatings', $this->paginate());
+        $this->set(compact('product', 'product_id', 'paths'));
+	}
+
+	function admin_add($product_id = null) {
+		if (!$product_id) {
+	        $this->Session->setFlash(sprintf(__('Invalid product', true)));
+            $this->redirect(array(
+                'controller' => 'products', 'action' => 'index', 'admin' => true
+            ));
+        }
+
+		if (!empty($this->data)) {
+		    $saved = false;
+		    $rating_ids = $this->data['ProductRating']['rating_id'];
+		    // rating not selected?
+		    if (!$rating_ids) {
+		        $this->data['ProductRating']['rating_id'] = null;
+		        $this->ProductRating->create();
+		        $saved = $this->ProductRating->save($this->data);
+	        } else {
+	            foreach ($rating_ids as $this->data['ProductRating']['rating_id']) {
+		            $this->ProductRating->create();
+		            $saved = $this->ProductRating->save($this->data);
+                }
+	        }
+            if ($saved) {
+                $this->Session->setFlash(sprintf(__('The %s has been saved', true), 'product rating'));
+		        $this->redirect(array(
+		            'controller' => 'product_ratings',
+		            'action' => 'index',
+		            'admin' => true,
+		            'product_id' => $product_id
+                ));
+	        } else {
+		        $this->Session->setFlash(sprintf(__('The %s could not be saved. Please, try again.', true), 'product rating'));
+	        }
+		}
+
+		$product = $this->ProductRating->Product->find('first', array(
+		    'conditions' => array('Product.id' => $product_id)
+		));
+		if (!$product) {
+	        $this->Session->setFlash(sprintf(__('Invalid product', true)));
+            $this->redirect(array(
+                'controller' => 'products', 'action' => 'index', 'admin' => true
+            ));
+        }
+        if (empty($this->data['ProductRating']['rating_id'])) {
+            $this->data['ProductRating']['rating_id'] = $this->ProductRating->availableRating($product_id);
+        }
+        $paths = $this->ProductRating->Product->getPath($product_id, array('id', 'parent_id', 'title'), -1);
+		$this->set(compact('product', 'product_id','paths'));
+	}
+
+	function admin_delete($product_id = null, $id = null) {
+		if (!$product_id || !$id) {
+			$this->Session->setFlash(__('Invalid product', true));
+			$this->redirect(array(
+			    'controller' => 'products',
+			    'action' => 'index'
+            ));
+		}
+		if (!empty($this->data)) {
+		    if ($this->ProductRating->delete($id)) {
+			    $this->Session->setFlash(__('Product rating deleted', true));
+			    $this->redirect(array(
+				    'action' => 'index',
+				    'product_id' => $product_id
+				));
+		    } else {
+		        $this->Session->setFlash(__('The product rating could not be deleted. Please, try again.', true));
+		    }
+        }
+        else {
+			$this->data = $this->ProductRating->find('first', array(
+			    'conditions' => array('ProductRating.id' => $id),
+			    'contain' => array('Rating.title')
+			));
+		}
+
+		$product = $this->ProductRating->Product->read(array('id', 'title'), $product_id);
+		if (!$product || empty($this->data['ProductRating'])) {
+	        $this->Session->setFlash(__('Invalid product', true));
+			$this->redirect(array(
+			    'controller' => 'products',
+			    'action' => 'index'
+			));
+	    }
+	    $paths = $this->ProductRating->Product->getPath($product_id, array('id', 'parent_id', 'title'), -1);
+		$this->set(compact('product_id', 'product','paths'));
+	}
+
+	function admin_move_up($product_id = null, $id = null) {
+	    if (!$product_id || !$id) {
+	        $this->Session->setFlash(sprintf(__('Invalid product', true)));
+            $this->redirect(array(
+                'controller' => 'products', 'action' => 'index', 'admin' => true
+            ));
+        }
+	    if ($this->ProductRating->move_up($id)) {
+	        $this->Session->setFlash(sprintf(__('The %s has been saved', true), 'product rating'));
+        } else {
+			$this->Session->setFlash(sprintf(__('The %s could not be saved. Please, try again.', true), 'product rating'));
+		}
+
+        $this->redirect(array(
+		    'action' => 'index',
+		    'product_id' => $product_id
+	    ));
+	}
+
+	function admin_move_down($product_id = null, $id = null) {
+	    if (!$product_id || !$id) {
+	        $this->Session->setFlash(sprintf(__('Invalid product', true)));
+            $this->redirect(array(
+                'controller' => 'products', 'action' => 'index', 'admin' => true
+            ));
+        }
+	    if ($this->ProductRating->move_down($id)) {
+	        $this->Session->setFlash(sprintf(__('The %s has been saved', true), 'product rating'));
+        } else {
+			$this->Session->setFlash(sprintf(__('The %s could not be saved. Please, try again.', true), 'product rating'));
+		}
+
+        $this->redirect(array(
+		    'action' => 'index',
+		    'product_id' => $product_id
+	    ));
+	}
+
+	function vote() {
+        if ($this->RequestHandler->isAjax()) {
+            Configure::write('debug', 0);
+            $this->layout = 'ajax';
+            $this->helpers[] = 'Js';
+
+            $id = $rate = null;
+            if (!empty($this->params['form']['id'])) {
+                $id = $this->params['form']['id'];
+            }
+            if (!empty($this->params['form']['rate'])) {
+                $rate = $this->params['form']['rate'];
+            }
+
+            if ($this->ProductRating->vote($id, $rate)) {
+                // store vote metadata so User wont be able to rate same product rating in the future
+                $data['Vote']['user_id'] = $this->Auth->user('id');
+                $data['Vote']['product_rating_id'] = $id;
+                $this->ProductRating->Vote->save($data);
+
+                $average = $this->ProductRating->field('average', compact('id'));
+                $this->set(compact('average'));
+            }
+        }
+	}
+}

@@ -1,0 +1,50 @@
+---
+UP:
+  create_table:
+    product_ratings:
+      product_id:
+        type: integer
+        null: true
+        length: 11
+      rating_id:
+        type: integer
+        null: false
+        length: 11
+      total_user:
+        type: integer
+        null: true
+        default:
+        length: 11
+      point:
+        type: integer
+        null: false
+        default: 0
+        length: 11
+      indexed_at:
+        type: integer
+        null: false
+        default: 0
+        length: 11
+  drop_column:
+    ratings: [total_user, point, indexed_at]
+
+DOWN:
+  drop_table:
+    - product_ratings
+  add_column:
+    ratings:
+      indexed_at:
+        type: integer
+        null: true
+        default:
+        length: 11
+      total_user:
+        type: integer
+        null: true
+        default:
+        length: 11
+      point:
+        type: integer
+        null: false
+        default: 0
+        length: 11

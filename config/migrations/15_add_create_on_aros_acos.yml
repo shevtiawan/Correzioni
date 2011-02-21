@@ -1,0 +1,12 @@
+---
+DOWN: 
+  remove_column: 
+    aros_acos:
+      _create:
+UP: 
+  add_column: 
+    aros_acos: 
+      _create: 
+        type: boolean
+        null: true
+        default: true

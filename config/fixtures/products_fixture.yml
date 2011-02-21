@@ -1,0 +1,95 @@
+---
+products:
+  -
+    id: 1
+    title: The Elyssian Spa
+    slug: the-elyssian-spa
+    indexed_at: 1
+    is_published: 1
+  -
+    id: 2
+    title: Westin Spa
+    slug: westin-spa
+    indexed_at: 2
+    is_published: 1
+  -
+    id: 3
+    title: Thalasson Spa
+    slug: thalasso-spa
+    indexed_at: 3
+    is_published: 1
+  -
+    id: 4
+    title: The Elyssian Spa New
+    slug: the-elyssian-spa-new
+    indexed_at: 4
+    is_published: 1
+  -
+    id: 5
+    title: Westin Spa New
+    slug: westin-spa-new
+    indexed_at: 5
+    is_published: 1
+  -
+    id: 6
+    title: Thalasson Spa New
+    slug: thalasso-spa-new
+    indexed_at: 6
+    is_published: 1
+  -
+    id: 7
+    title: The Elyssian Grand Spa
+    slug: the-elyssian-grand-spa
+    indexed_at: 7
+    is_published: 1
+  -
+    id: 8
+    title: Westin Grand Spa
+    slug: westin-grand-spa
+    indexed_at: 8
+    is_published: 1
+  -
+    id: 9
+    title: Thalasson Grand Spa
+    slug: thalasso-grand-spa
+    indexed_at: 9
+    is_published: 1
+
+
+products_categories:
+  -
+    id: 1
+    product_id: 1
+    category_id: 3
+  -
+    id: 2
+    product_id: 2
+    category_id: 3
+  -
+    id: 3
+    product_id: 3
+    category_id: 3
+  -
+    id: 4
+    product_id: 4
+    category_id: 3
+  -
+    id: 5
+    product_id: 5
+    category_id: 3
+  -
+    id: 6
+    product_id: 6
+    category_id: 3
+  -
+    id: 7
+    product_id: 7
+    category_id: 3
+  -
+    id: 8
+    product_id: 8
+    category_id: 3
+  -
+    id: 9
+    product_id: 9
+    category_id: 3

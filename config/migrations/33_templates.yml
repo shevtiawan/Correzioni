@@ -1,0 +1,22 @@
+---
+UP:
+  create_table:
+    templates:
+      name:
+        type: string
+        length: 255
+        null: false
+      package:
+        type: string
+        length: 255
+        null: false
+      package_dir:
+        type: string
+        length: 255
+        null: false
+      is_activated:
+        type: boolean
+        default: false
+DOWN:
+  drop_table:
+    templates

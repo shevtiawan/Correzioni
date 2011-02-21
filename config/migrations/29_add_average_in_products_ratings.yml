@@ -1,0 +1,11 @@
+---
+UP:
+  add_column:
+    product_ratings:
+      average:
+        type: float
+        default: 0
+        null: true
+DOWN:
+  drop_column:
+    product_ratings: [average]

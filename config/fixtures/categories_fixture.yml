@@ -1,0 +1,28 @@
+---
+categories:
+  -
+    id: 1
+    title: Bali
+    slug: bali
+    lft: 1
+    rght: 6
+    indexed_at: 1
+    is_published: 1
+  -
+    id: 2
+    parent_id: 1
+    lft: 2
+    rght: 5
+    title: Location
+    slug: location
+    indexed_at: 1
+    is_published: 1
+  -
+    id: 3
+    parent_id: 2
+    lft: 3
+    rght: 4
+    title: Reflexology
+    slug: reflexology
+    indexed_at: 1
+    is_published: 1

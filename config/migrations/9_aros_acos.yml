@@ -1,0 +1,28 @@
+---
+DOWN: 
+  drop_table: 
+    - aros_acos
+UP: 
+  create_table: 
+    aros_acos: 
+      aro_id: 
+        type: integer
+        null: true
+        default: 
+        length: 11
+      aco_id:
+        type: integer
+        null: true
+        length: 11
+      _read:
+        type: boolean
+        null: false
+        default: true
+      _update:
+        type: boolean
+        null: false
+        default: true
+      _delete:
+        type: boolean
+        null: false
+        default: true

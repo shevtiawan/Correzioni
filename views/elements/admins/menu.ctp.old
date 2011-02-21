@@ -1,0 +1,104 @@
+<div id="main_menu">
+	<ul>
+        <li>
+            <?php
+            echo $this->Html->link(
+                "<span><span>Dashboard</span></span>",
+                '#',
+                array(
+                    'escape' => false,
+                    'class' => null
+                )
+            );
+            ?>
+        </li>
+        <li>
+            <?php
+            echo $this->Html->link(
+                "<span><span>Categories</span></span>",
+                array("plugin" => null, "controller" => "categories", "action" => "index"),
+                array(
+                    'escape' => false,
+                    'class' => (strtoupper($controllerName) == 'CATEGORIES' ? 'selected' : '')
+                )
+            );
+            ?>
+        </li>
+        <li>
+            <?php
+            echo $this->Html->link(
+                "<span><span>Products</span></span>",
+                array("plugin" => null, "controller" => "products", "action" => "index"),
+                array(
+                    'escape' => false,
+                    'class' => (strtoupper($controllerName) == 'PRODUCTS' ? 'selected' : '')
+                )
+            );
+            ?>
+        </li>
+        <li>
+            <?php
+            echo $this->Html->link(
+                "<span><span>Users</span></span>",
+                array("plugin" => null, "controller" => "users","action" => "index"),
+                array(
+                    'escape' => false,
+                    'class' => (strtoupper($controllerName) == 'USERS' ? 'selected' : '')
+                )
+            );
+            ?>
+        </li>
+        <li>
+            <?php
+            echo $this->Html->link(
+                "<span><span>Ratings</span></span>",
+                array("plugin" => null, "controller" => "ratings", "action" => "index"),
+                array(
+                    'escape' => false,
+                    'class' => (strtoupper($controllerName) == 'RATINGS' ? 'selected' : '')
+                )
+            );
+            ?>
+        </li>
+        <li>
+            <?php
+            echo $this->Html->link(
+                "<span><span>Services</span></span>",
+                array("plugin" => null, "controller" => "services", "action" => "index"),
+                array(
+                    'escape' => false,
+                    'class' => (strtoupper($controllerName) == 'SERVICES' ? 'selected' : '')
+                )
+            );
+            ?>
+        </li>
+        <li>
+            <?php
+            echo $this->Html->link(
+                "<span><span>Reports</span></span>",
+                "#",
+                array(
+                    'escape' => false,
+                    'class' => (strtoupper($controllerName) == 'REPORTS' ? 'selected' : '')
+                )
+            );
+            ?>
+        </li>
+        <li class="last">
+            <?php
+            echo $this->Html->link(
+                "<span><span>Settings</span></span>",
+                array("plugin" => null, "controller" => "settings", "action" => "configure"),
+                array(
+                    'escape' => false,
+                    'class' => (eregi('acl|aco|setting|template|plugin', strtoupper($controllerName)) ? 'selected' : '')
+                )
+            );
+            ?>
+        </li>
+	</ul>
+</div>
+
+<div id="sec_menu">
+    <?php echo $this->element(strtolower($controllerName)."/submenu"); ?>
+</div>
